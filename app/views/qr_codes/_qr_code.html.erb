@@ -1,0 +1,24 @@
+<div id="<%= dom_id qr_code %>">
+  <div class="my-5 flex">
+
+ <strong class=" text-2xl mr-12 self-center font-medium mb-1"><%= User.find(qr_code.user_id).username %></strong>
+
+      <%= image_tag  User.find(qr_code.user_id).profile_pic, class:"rounded-full w-40 h-40 m-auto my-4" %>
+  </div>
+
+  <p class="my-5 text-xl">
+    <strong class="block font-medium mb-1">Product Name:</strong>
+    <%= qr_code.product_name %>
+  </p>
+
+  <p class="my-5 text-xl">
+    <strong class="block font-medium mb-1 "> Expiration Date:</strong>
+    <%= qr_code.expiration_code %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this qr code", qr_code, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this qr code', edit_qr_code_path(qr_code), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="bg-blue-200 flex justify-between">
+        <h2 class="text-4xl p-3">Qr Generator</h2>
+        <div class="p-3">
+            <% if Current.user %>
+            <p class="text-2xl pr-3"><%= link_to Current.user.username, profile_path %></p>
+            <%= link_to 'Edit Password', edit_password_path %>
+            <%= button_to 'Logout', logout_path, method: :delete %>
+            <% else %>
+            <%= link_to 'Sign Up', sign_up_path, class: 'text-2xl' %>
+            or
+            <%= link_to 'Login', sign_in_path, class: 'text-2xl' %>
+            <% end %>
+        </div>
+    </div>

@@ -1,0 +1,20 @@
+<div class="flex-col flex justify-center">
+  <h1 class="text-center text-4xl">Sign In</h1>
+  <div class="rounded shadow-md m-auto w-1/4">
+    <div class="m-8">
+      <%= form_with url: sign_in_path do |f| %>
+        <p>
+        <%= f.label 'email:'%><br>
+        <%= f.text_field :email, id: 'email' %>
+        </p>
+        <p>
+        <%= f.label 'password:'%><br>
+        <%= f.password_field :password, id: 'password' %>
+        </p>
+        <p>
+        <%= f.submit 'Log In' %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

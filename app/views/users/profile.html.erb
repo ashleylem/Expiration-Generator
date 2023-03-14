@@ -1,0 +1,36 @@
+
+ <div>
+    <div class="flex ">
+        <div class="basis-1/4"> 
+            <h1 class="text-center text-2xl"><%= Current.user.username %> </h1>
+              <% if Current.user.profile_pic.attached? %>
+                <%= image_tag Current.user.profile_pic, class:"rounded-full w-40 h-40 m-auto my-4" %>
+                <% else %>
+            <%= form_for Current.user, url: update_profile_pic_path, html: { method: :patch, multipart: true } do |f| %>
+            <%= f.file_field :profile_pic %>
+            <%= f.submit "Update Profile Picture" %>
+            <% end %>
+            <% end %>
+        </div>  
+        <div class="basis-3/4 "> 
+    <h3 class=" text-2xl">Generate New QR Codes Here</h3>
+    <%= link_to "New QR Code", new_qr_code_path, class: "my-4 mx-4 text-white rounded-lg py-3 px-5 inline-block bg-emerald-500 font-medium" %>    
+        </div>        
+    </div>
+    
+
+    <div class="flex mt-4 grid-rows-5">
+<% Current.user.qr_codes.each do |qr_code| %>
+  <div class="rounded flex-col shadow-md bg-blue-50 px-5 justify-center	p-3 m-3">
+    <h3 class="font-medium text-lg">Product Name: <%= qr_code.product_name %></h3>
+    <p class="font-medium text-lg">Expiration Code: <%= qr_code.expiration_code %></p>
+ <%= image_tag qr_code.image, class:"mx-auto" %> 
+ <div class="flex justify-center">
+   <%= link_to 'Edit', edit_qr_code_path(qr_code.id), class: "mt-2 rounded-lg py-2 px-2 bg-blue-400 mx-1" %>
+   <%= link_to 'View', qr_code_path(qr_code.id), class: "mt-2 rounded-lg py-2 px-2 bg-blue-400 mx-1" %>
+   <%= link_to "Download", qr_code.image, download: "qr_code.png", class: "mt-2 rounded-lg py-2 px-2 bg-blue-400 mx-1" %>
+</div>
+</div>
+<% end %>
+</div>
+ </div>
