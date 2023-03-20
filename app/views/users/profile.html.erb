@@ -21,7 +21,7 @@
 
     <div class="flex mt-4 grid-rows-5">
 <% Current.user.qr_codes.each do |qr_code| %>
-  <div class="rounded flex-col shadow-md bg-blue-50 px-5 justify-center	p-3 m-3">
+  <div class="rounded flex-col profile-qr bg-orange-50 px-5 justify-center	p-3 m-3">
     <h3 class="font-medium text-lg">Product Name: <%= qr_code.product_name %></h3>
     <p class="font-medium text-lg">Expiration Code: <%= qr_code.expiration_code %></p>
  <%= image_tag qr_code.image, class:"mx-auto" %> 
