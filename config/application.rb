@@ -13,7 +13,7 @@ module QrGenerator
 
     config.hosts << "3000-ashleylem-railspractice-z7xcnir57il.ws-us90.gitpod.io"
 
-    config.hosts << "https://mysite-bud4.onrender.com"
+    config.hosts << "mysite-bud4.onrender.com"
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
