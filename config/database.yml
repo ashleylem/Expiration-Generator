@@ -23,4 +23,9 @@ test:
 
 production:
   <<: *default
+  database: mysite_u85y
+  username: mysite
+  password: sVlzbeSgnTbpFSVAAsONaRr8T1SKrxu3
+  host: dpg-cgcfcag2qv267ucueel0-a
+  port: 5432
   url: <%= ENV['DATABASE_URL'] %>>
