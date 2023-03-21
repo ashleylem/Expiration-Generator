@@ -28,4 +28,4 @@ production:
   password: sVlzbeSgnTbpFSVAAsONaRr8T1SKrxu3
   host: dpg-cgcfcag2qv267ucueel0-a
   port: 5432
-  url: <%= ENV['DATABASE_URL'] %>>
+  url: <%= ENV.fetch('DATABASE_URL') %>
