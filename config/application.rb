@@ -12,6 +12,9 @@ module QrGenerator
     config.action_mailer.default_url_options = { host: "3000-ashleylem-railspractice-z7xcnir57il.ws-us90.gitpod.io" }
 
     config.hosts << "3000-ashleylem-railspractice-z7xcnir57il.ws-us90.gitpod.io"
+
+    config.hosts << "https://mysite-bud4.onrender.com"
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
