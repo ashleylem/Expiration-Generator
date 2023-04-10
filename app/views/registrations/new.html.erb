@@ -1,17 +1,21 @@
 <div class="flex-col flex justify-center">
   <h1 class="text-center text-4xl">Sign Up</h1>
-  <div class="rounded shadow-md m-auto w-1/4">
-  <div class="m-8">
-  <%= form_with model: @user, url: sign_up_path do |f| %>
+  <div class="rounded shadow-md m-auto w-1/2 md:w-1/4">
+  <div class=" p-8 flex justify-center">
+  <%= form_with model: @user,  url: sign_up_path do |f|%>
     <p>
     <%= f.label 'email' %><br>
     <%= f.text_field :email %>
     </p>
     <p>
-        <p>
+    <%= f.label 'company' %><br>
+    <%= f.text_field :company %>
+    </p>
+    <p>
     <%= f.label 'username' %><br>
     <%= f.text_field :username %>
     </p>
+    <p>
     <%= f.label 'password' %><br>
     <%= f.password_field :password %>
     </p>
@@ -20,7 +24,7 @@
     <%= f.password_field :password_confirmation %>
     </p>
     <p>
-    <%= f.submit 'Sign Up' %>
+    <%= f.submit 'Sign Up', class: " mt-2 rounded-lg py-3 px-5 bg-blue-200 inline-block font-medium" %>
     </p>
   <% end %>
   </div>

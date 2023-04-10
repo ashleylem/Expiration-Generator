@@ -11,6 +11,7 @@ gem "sprockets-rails"
 
 gem 'bcrypt'
 
+gem "sqlite3"
 
 gem 'pg'
 

@@ -11,7 +11,7 @@ module QrGenerator
   class Application < Rails::Application
     config.action_mailer.default_url_options = { host: "3000-ashleylem-railspractice-z7xcnir57il.ws-us90.gitpod.io" }
 
-    config.hosts << "3000-ashleylem-railspractice-z7xcnir57il.ws-us90.gitpod.io"
+    config.hosts << "3000-ashleylem-railspractice-z7xcnir57il.ws-us93.gitpod.io"
 
     config.hosts << "mysite-bud4.onrender.com"
 
