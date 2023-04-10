@@ -1,7 +1,5 @@
 class User < ApplicationRecord
      has_many :qr_codes
-
-     after_create :generate_qr
   
      has_one_attached :profile_pic
      # adds virtual attributes for authentication
