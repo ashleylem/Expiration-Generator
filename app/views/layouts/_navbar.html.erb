@@ -2,7 +2,7 @@
         <h2 class="text-4xl p-3" style="font-family: 'Rampart One', cursive;">EXPIRATION GENERATOR</h2>
         <div class="p-3">
             <% if Current.user %>
-            <p class="text-2xl pr-3"><%= link_to Current.user.username, profile_path %></p>
+            <p class="text-2xl pr-3"><%= link_to Current.user.company, profile_path %></p>
             <%= link_to 'Edit Password', edit_password_path %>
             <%= button_to 'Logout', logout_path, method: :delete %>
             <% else %>

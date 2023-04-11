@@ -47,7 +47,7 @@ class QrCodesController < ApplicationController
         filename: "#{@qr_code.id}.png",
         content_type: "image/png"
       )      
-      redirect_to @profile, notice: "QR code was successfully created."
+      redirect_to profile_path, notice: "QR code was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
